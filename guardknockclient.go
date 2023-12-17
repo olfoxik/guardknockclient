@@ -18,7 +18,7 @@ func main() {
  
     // Замените URL на целевой REST API
     //url := "http://95.140.159.65:3004/"
-    url := cfg.Section("Main").Key("url).String()
+      url := cfg.Section("Main").Key("url).String()
     // Замените вашими учетными данными
  //   username := "olfox2"
   //  password := "tuxpux7"
