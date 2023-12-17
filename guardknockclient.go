@@ -12,12 +12,13 @@ func main() {
 
     cfg, err := ini.Load("config.ini")
     sec1, err := cfg.GetSection("Section")
-    username := sec1.GetKey("username")
-    password := sec1.GetKey("password")
+  //  username, err := sec1.GetKey("username")
+  //  password, err := sec1.GetKey("password")
 
-    
+    url, err := sec1.GetKey("url")
+ 
     // Замените URL на целевой REST API
-    url := "http://95.140.159.65:3004/"
+    //url := "http://95.140.159.65:3004/"
 
     // Замените вашими учетными данными
     username := "olfox2"
