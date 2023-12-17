@@ -11,11 +11,11 @@ import "encoding/base64"
 func main() {
 
     cfg, err := ini.Load("config.ini")
-    sec1, err := cfg.GetSection("Section")
+  //  sec1, err := cfg.GetSection("Section")
   //  username, err := sec1.GetKey("username")
   //  password, err := sec1.GetKey("password")
 
-    url, err := sec1.GetKey("url").String() 
+    url, err := cfg.GetSection("Section").GetKey("url").String() 
  
     // Замените URL на целевой REST API
     //url := "http://95.140.159.65:3004/"
