@@ -11,6 +11,10 @@ import (
 func main() {
 
     cfg, err := ini.Load("config.ini")
+    sec1, err := cfg.GetSection("Section")
+    username, err := sec1.GetKey("username")
+    password, err := sec1.GetKey("password")
+
     
     // Замените URL на целевой REST API
     url := "http://95.140.159.65:3004/"
