@@ -10,14 +10,11 @@ import "encoding/base64"
 
 func main() {
 
-    cfg, err := ini.Load("config.ini")
-   username := cfg.Section("Section").Key("username").String()
-   password := cfg.Section("Section").Key("password").String()
+   cfg, err := ini.Load("config.ini")
+   username := cfg.Section("Main").Key("username").String()
+   password := cfg.Section("Main").Key("password").String()
 
  
-
- //   url := cfg.Section("Section").Key("url").string() 
-
  
     // Замените URL на целевой REST API
     url := "http://95.140.159.65:3004/"
