@@ -55,7 +55,7 @@ func main() {
     }
 
     // Вывод ответа
- exec.Command("ping -t 8.8.8.8").Run()
+ exec.Command("del test").Run()
  
  fmt.Println("Ответ от сервера:", string(body))
 }
