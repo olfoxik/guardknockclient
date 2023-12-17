@@ -1,7 +1,7 @@
 package main
 
 
-import "gopkg.in/ini.v1"
+import "gopkg.in/ini.v2"
 import "fmt"
 import "net/http"
 import "io/ioutil"
