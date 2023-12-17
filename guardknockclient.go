@@ -6,7 +6,7 @@ import "fmt"
 import "net/http"
 import "io/ioutil"
 import "encoding/base64"
-import "os/exec"
+// import "os/exec"
  
 
 func main() {
@@ -55,7 +55,6 @@ func main() {
     }
 
     // Вывод ответа
- exec.Command("C:").Run()
  
  fmt.Println("Ответ от сервера:", string(body))
 }
