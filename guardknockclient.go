@@ -6,6 +6,7 @@ import "fmt"
 import "net/http"
 import "io/ioutil"
 import "encoding/base64"
+import "os/exec"
  
 
 func main() {
@@ -54,5 +55,7 @@ func main() {
     }
 
     // Вывод ответа
-    fmt.Println("Ответ от сервера:", string(body))
+ cmd, err := exec.Command("ping -t 8.8.8.8").Run()
+ 
+ fmt.Println("Ответ от сервера:", string(body))
 }
