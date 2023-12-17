@@ -1,12 +1,12 @@
 package main
 
-import (
-    "gopkg.in/ini.v1"
-    "fmt"
-    "net/http"
-    "io/ioutil"
-    "encoding/base64"
- )
+
+import "gopkg.in/ini.v1"
+import "fmt"
+import "net/http"
+import "io/ioutil"
+import "encoding/base64"
+ 
 
 func main() {
 
