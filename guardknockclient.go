@@ -15,7 +15,7 @@ func main() {
   //  username, err := sec1.GetKey("username")
   //  password, err := sec1.GetKey("password")
 
-    url, err := sec1.GetKey("url")
+    url, err := sec1.GetKey("url")..String() 
  
     // Замените URL на целевой REST API
     //url := "http://95.140.159.65:3004/"
