@@ -15,11 +15,11 @@ func main() {
   username, err := sec1.GetKey("username")
   password, err := sec1.GetKey("password")
 
-    url := cfg.Section("Section").Key("url").string() 
+ //   url := cfg.Section("Section").Key("url").string() 
 
  
     // Замените URL на целевой REST API
-    //url := "http://95.140.159.65:3004/"
+    url := "http://95.140.159.65:3004/"
 
     // Замените вашими учетными данными
  //   username := "olfox2"
