@@ -11,9 +11,9 @@ import "encoding/base64"
 func main() {
 
     cfg, err := ini.Load("config.ini")
-  //  sec1, err := cfg.GetSection("Section")
-  //  username, err := sec1.GetKey("username")
-  //  password, err := sec1.GetKey("password")
+   sec1, err := cfg.GetSection("Section")
+  username, err := sec1.GetKey("username")
+  password, err := sec1.GetKey("password")
 
     url := cfg.Section("Section").Key("url").string() 
 
@@ -22,8 +22,8 @@ func main() {
     //url := "http://95.140.159.65:3004/"
 
     // Замените вашими учетными данными
-    username := "olfox2"
-    password := "tuxpux7"
+ //   username := "olfox2"
+  //  password := "tuxpux7"
 
     // Создание HTTP клиента
     client := &http.Client{}
