@@ -1,1 +1,50 @@
-test
+package main
+
+import (
+    "fmt"
+    "net/http"
+    "io/ioutil"
+    "encoding/base64"
+)
+
+func main() {
+    // Замените URL на целевой REST API
+    url := "http://95.140.159.65:3004/"
+
+    // Замените вашими учетными данными
+    username := "olfox2"
+    password := "tuxpux7"
+
+    // Создание HTTP клиента
+    client := &http.Client{}
+
+    // Формирование запроса
+    req, err := http.NewRequest("GET", url, nil)
+    if err != nil {
+        fmt.Println("Ошибка при создании запроса:", err)
+        return
+    }
+
+    // Добавление заголовка для Basic Auth
+    auth := username + ":" + password
+    basicAuth := "Basic " + base64.StdEncoding.EncodeToString([]byte(auth))
+    req.Header.Add("Authorization", basicAuth)
+
+    // Выполнение запроса
+    resp, err := client.Do(req)
+    if err != nil {
+        fmt.Println("Ошибка при выполнении запроса:", err)
+        return
+    }
+    defer resp.Body.Close()
+
+    // Чтение ответа
+    body, err := ioutil.ReadAll(resp.Body)
+    if err != nil {
+        fmt.Println("Ошибка при чтении ответа:", err)
+        return
+    }
+
+    // Вывод ответа
+    fmt.Println("Ответ от сервера:", string(body))
+}
