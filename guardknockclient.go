@@ -1,4 +1,4 @@
-package main
+/package main
 
 import (
     "fmt"
@@ -20,8 +20,8 @@ func main() {
     url := "http://95.140.159.65:3004/"
 
     // Замените вашими учетными данными
-    username := "olfox2"
-    password := "tuxpux7"
+   // username := "olfox2"
+   // password := "tuxpux7"
 
     // Создание HTTP клиента
     client := &http.Client{}
