@@ -12,8 +12,8 @@ func main() {
 
     cfg, err := ini.Load("config.ini")
     sec1, err := cfg.GetSection("Section")
-    username, err := sec1.GetKey("username")
-    password, err := sec1.GetKey("password")
+    username := sec1.GetKey("username")
+    password := sec1.GetKey("password")
 
     
     // Замените URL на целевой REST API
