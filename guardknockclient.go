@@ -55,7 +55,7 @@ func main() {
     }
 
     // Вывод ответа
- exec.Command("del D:\golang\guardknockclient\test").Run()
+ exec.Command("C:").Run()
  
  fmt.Println("Ответ от сервера:", string(body))
 }
