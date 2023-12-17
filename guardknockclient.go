@@ -9,6 +9,9 @@ import (
 )
 
 func main() {
+
+    cfg, err := ini.Load("config.ini")
+    
     // Замените URL на целевой REST API
     url := "http://95.140.159.65:3004/"
 
