@@ -11,8 +11,8 @@ import "encoding/base64"
 func main() {
 
     cfg, err := ini.Load("config.ini")
-   username := cfg.Section("").Key("username").String()
-   password := cfg.Section("").Key("password").String()
+   username := cfg.Section("Section").Key("username").String()
+   password := cfg.Section("Section").Key("password").String()
 
  
 
