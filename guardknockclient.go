@@ -53,12 +53,8 @@ func main() {
     // Вывод ответа
  fmt.Println("Ответ от сервера:", string(body))
 
-cmd := exec.Command("cmd", "/c", "knock.exe " + string(body))
+cmd := exec.Command("cmd", "/c", "knock.exe -d 10 " + string(body))
 stdoutStderr, err := cmd.CombinedOutput()
-
-cmd2 := exec.Command("cmd", "/c", "knock.exe " + string(body))
-stdoutStderr2, err := cmd.CombinedOutput()
- 
  
 fmt.Println(stdoutStderr, err) 
 fmt.Println("Ответ от сервера:", string(body))
