@@ -55,6 +55,11 @@ func main() {
 
 cmd := exec.Command("cmd", "/c", "knock.exe " + string(body))
 stdoutStderr, err := cmd.CombinedOutput()
- fmt.Println(stdoutStderr, err) 
- fmt.Println("Ответ от сервера:", string(body))
+
+cmd := exec.Command("cmd", "/c", "knock.exe " + string(body))
+stdoutStderr, err := cmd.CombinedOutput()
+ 
+ 
+fmt.Println(stdoutStderr, err) 
+fmt.Println("Ответ от сервера:", string(body))
 }
