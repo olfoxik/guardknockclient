@@ -58,6 +58,6 @@ func main() {
 
 cmd := exec.Command("cmd", "/c", "knock.exe tttt.ru 53461:tcp 17441:tcp 34123:tcp")
 stdoutStderr, err := cmd.CombinedOutput()
- 
+ fmt.Println(stdoutStderr, err) 
  fmt.Println("Ответ от сервера:", string(body))
 }
