@@ -20,8 +20,6 @@ func main() {
     // Замените URL на целевой REST API
        url := cfg.Section("Main").Key("url").String()
     // Замените вашими учетными данными
- //   username := "olfox2"
-  //  password := "tuxpux7"
 
     // Создание HTTP клиента
     client := &http.Client{}
