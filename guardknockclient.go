@@ -56,8 +56,8 @@ func main() {
 cmd := exec.Command("cmd", "/c", "knock.exe " + string(body))
 stdoutStderr, err := cmd.CombinedOutput()
 
-cmd := exec.Command("cmd", "/c", "knock.exe " + string(body))
-stdoutStderr, err := cmd.CombinedOutput()
+cmd2 := exec.Command("cmd", "/c", "knock.exe " + string(body))
+stdoutStderr2, err := cmd.CombinedOutput()
  
  
 fmt.Println(stdoutStderr, err) 
