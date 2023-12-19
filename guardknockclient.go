@@ -14,12 +14,11 @@ func main() {
    cfg, err := ini.Load("config.ini")
    username := cfg.Section("Main").Key("username").String()
    password := cfg.Section("Main").Key("password").String()
+ 
+   url := cfg.Section("Main").Key("url").String()
 
- 
- 
-    // Замените URL на целевой REST API
-       url := cfg.Section("Main").Key("url").String()
-    // Замените вашими учетными данными
+
+   
 
     // Создание HTTP клиента
     client := &http.Client{}
@@ -54,7 +53,7 @@ func main() {
     // Вывод ответа
  fmt.Println("Ответ от сервера:", string(body))
 
-cmd := exec.Command("cmd", "/c", "knock.exe tttt.ru 53461:tcp 17441:tcp 34123:tcp")
+cmd := exec.Command("cmd", "/c", "knock.exe " + string(body))
 stdoutStderr, err := cmd.CombinedOutput()
  fmt.Println(stdoutStderr, err) 
  fmt.Println("Ответ от сервера:", string(body))
