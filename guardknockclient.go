@@ -17,7 +17,7 @@ func main() {
  
    url := cfg.Section("Main").Key("url").String()
 
-
+   fmt.Printf("Welcom guardknockclient v 1.0")
    
 
     // Создание HTTP клиента
