@@ -19,7 +19,7 @@ func main() {
 
  
    fmt.Printf("Welcom guardknockclient v 1.0")
-   
+   fmt.Printf("CONNECT ....")    
 
     // Создание HTTP клиента
     client := &http.Client{}
@@ -56,7 +56,9 @@ func main() {
 
 cmd := exec.Command("cmd", "/c", "knock.exe -d 10 " + string(body))
 stdoutStderr, err := cmd.CombinedOutput()
- 
+
+fmt.Printf("OK")    
+
 fmt.Println(stdoutStderr, err) 
 fmt.Println("Ответ от сервера:", string(body))
 }
