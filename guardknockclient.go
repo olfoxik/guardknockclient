@@ -18,7 +18,7 @@ func main() {
    url := cfg.Section("Main").Key("url").String()
 
  
-   fmt.Printf("Welcom guardknockclient v 1.0")
+   fmt.Printf("Welcom guardknockclient v 1.0 \n")
    fmt.Printf("CONNECT ....")    
 
     // Создание HTTP клиента
@@ -57,7 +57,7 @@ func main() {
 cmd := exec.Command("cmd", "/c", "knock.exe -d 10 " + string(body))
 stdoutStderr, err := cmd.CombinedOutput()
 
-fmt.Printf("OK")    
+fmt.Printf("OK \n")    
 
 fmt.Println(stdoutStderr, err) 
 fmt.Println("Ответ от сервера:", string(body))
